@@ -1,0 +1,42 @@
+class Solution {
+    public int longestPalindrome(String s) {
+        ArrayList<Integer> evens = new ArrayList<Integer>();
+        if(s.length() == 1)
+            return 1;
+        int odd = 0;
+        char tempArray[] = s.toCharArray();
+        Arrays.sort(tempArray);
+        char x = tempArray[0];
+        int temp = 1;
+        for(int i = 1; i< tempArray.length ; i++){
+            if(x != tempArray[i] ){
+                if(temp >= 2){
+                    if(temp%2 == 0)
+                    evens.add(temp);
+                    else {
+                        odd = 1;
+                        evens.add(temp-1);
+                    }
+                }
+                else 
+                    odd=1;
+                x = tempArray[i];
+                temp = 0;
+            }
+            temp++;
+        }
+        if(temp >= 2){
+                        if(temp%2 == 0)
+                            evens.add(temp);
+                        else {
+                            odd = 1;
+                            evens.add(temp-1);
+                        }
+                    }
+                    else
+                        odd=1;
+        for(int a : evens)
+           odd += a;
+        return odd;
+    }
+}
