@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class ValidParentheses_20 {
+public class 20.ValidParentheses{
 
     public static void main(String[] args) {
         String strs = "}";
