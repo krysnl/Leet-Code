@@ -1,4 +1,4 @@
-public class ReverseInteger_7 {
+public class 7.ReverseInteger {
     public static void main(String[] args) {
         int x = 1534236469;
         System.out.println(reverse(x));
