@@ -1,4 +1,4 @@
-public class SearchInsertPosition_35 {
+public class 35.SearchInsertPosition {
 
     public static void main(String[] args) {
         int[] x = {0,1,2,2,3,0,4,2};
